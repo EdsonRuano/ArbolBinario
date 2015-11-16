@@ -14,6 +14,7 @@ public class Proyecto {
         ar.insertar(6);
         ar.insertar(7);
         ar.insertar(8);
+        ar.insertar(9);
   
 
     
