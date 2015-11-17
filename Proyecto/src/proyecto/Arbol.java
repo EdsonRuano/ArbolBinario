@@ -48,4 +48,54 @@ public class Arbol {
         }
     }
     }//fin insertar
-}//fin classe
+    
+    public void imprimeIno(){
+    
+        inorder(raiz);
+    }
+    
+    public void inorder(Nodo aux){
+             
+        if (aux != null){
+        
+            inorder(aux.izq);
+            System.out.println(aux.valor);
+            inorder(aux.der);
+            
+        }
+        }
+    
+    public void imprimePre(){
+    
+        preorder(raiz);
+    } 
+    
+    public void preorder(Nodo aux){
+             
+        if (aux != null){
+        
+            System.out.println(aux.valor);
+            preorder(aux.izq);
+            preorder(aux.der);
+            
+        }
+        }
+
+        public void imprimePos(){
+    
+        postorden(raiz);
+    } 
+    
+    public void postorden(Nodo aux){
+             
+        if (aux != null){
+            
+            postorden(aux.izq);
+            postorden(aux.der);
+            System.out.println(aux.valor);
+            
+        }
+        }
+    
+    
+   }//fin classe
