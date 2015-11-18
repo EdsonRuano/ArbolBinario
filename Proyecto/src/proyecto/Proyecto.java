@@ -26,5 +26,8 @@ public class Proyecto {
     ar.imprimeIno();    System.out.println("\n");
     ar.imprimePos();    System.out.println("\n");
     
+    System.out.println(ar.buscaHijoIzq(5));
+    System.out.println(ar.buscaHijoDer(5));
+    
     }  
 }

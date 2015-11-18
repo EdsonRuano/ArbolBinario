@@ -54,7 +54,7 @@ public class Arbol {
         inorder(raiz);
     }
     
-    public void inorder(Nodo aux){
+    private void inorder(Nodo aux){
              
         if (aux != null){
         
@@ -70,7 +70,7 @@ public class Arbol {
         preorder(raiz);
     } 
     
-    public void preorder(Nodo aux){
+    private void preorder(Nodo aux){
              
         if (aux != null){
         
@@ -81,12 +81,12 @@ public class Arbol {
         }
         }
 
-        public void imprimePos(){
+    public void imprimePos(){
     
         postorden(raiz);
     } 
     
-    public void postorden(Nodo aux){
+    private void postorden(Nodo aux){
              
         if (aux != null){
             
@@ -97,5 +97,42 @@ public class Arbol {
         }
         }
     
+    //metodo para buscar un nodo
+    
+    private Nodo buscar(int valor){
+    
+        Nodo aux = raiz;
+        
+        while(aux.valor != valor){
+        
+            if(valor < aux.valor){
+            
+                aux = aux.izq;
+            
+            }else{
+                
+                aux = aux.der;
+            }
+            
+            if (aux==null){
+            
+                return null;
+            }
+        }
+        
+        return aux;
+    }
+    
+    //Buscar un nodo Z para obtener hijo izquierdo
+    
+    public int buscaHijoIzq(int valor){
+    
+        return buscar(valor).izq.valor;
+    }
+    
+    public int buscaHijoDer(int valor){
+    
+        return buscar(valor).der.valor;
+    }
     
    }//fin classe
