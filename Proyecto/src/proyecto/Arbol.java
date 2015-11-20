@@ -131,18 +131,26 @@ public class Arbol {
     
     //Buscar un nodo Z para obtener hijo izquierdo
     
-    public int buscaHijoIzq(int valor){
+    public void buscaHijoIzq(int valor){
     
+        if (buscar(valor).izq != null){
+        
         System.out.print("--> "+buscar(valor).izq.valor);
         
-        return buscar(valor).izq.valor;
+        }else{  
+        System.out.print("--> na");
+        }
     }
     //Buscar un nodo Z para obtener hijo derecho
-    public int buscaHijoDer(int valor){
+    public void buscaHijoDer(int valor){
     
+        if (buscar(valor).der != null){
+        
         System.out.print("--> "+buscar(valor).der.valor);
         
-        return buscar(valor).der.valor;
+        }else{  
+        System.out.print("--> na");
+        }
     }
     
     //metodo para eliminar
