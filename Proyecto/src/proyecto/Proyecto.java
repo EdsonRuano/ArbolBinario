@@ -1,45 +1,5 @@
 package proyecto;
 
-/*public class Proyecto {
-
-    public static void main(String[] args) {
-        
-        System.out.println("Mi Arbol Binario");
-        
-        Arbol ar = new Arbol();
-        
-        ar.insertar(5);
-        ar.insertar(3);
-        ar.insertar(2);
-        ar.insertar(7);
-        ar.insertar(4);
-        ar.insertar(6);
-        ar.insertar(10);
-        ar.insertar(1);
-        ar.insertar(12);
-      
-    /*System.out.println(ar.raiz.valor);
-    System.out.println(ar.raiz.izq.valor);
-    System.out.println(ar.raiz.der.valor);
-    System.out.println(ar.raiz.der.izq.valor);
-    System.out.println(ar.raiz.der.izq.der.valor+"\n");
-    *//*
-    ar.imprimePre();    System.out.println("\n");
-    ar.imprimeIno();    System.out.println("\n");
-    ar.imprimePos();    System.out.println("\n");
-    
-    ar.elimina(7);
-    
-    ar.imprimePre();    System.out.println("\n");
-    ar.imprimeIno();    System.out.println("\n");
-    ar.imprimePos();    System.out.println("\n");
-    
-    System.out.println(ar.buscaHijoIzq(5));
-    System.out.println(ar.buscaHijoDer(5));
-    
-    }  
-}*/
-
 public class Proyecto {
 
     public static void main(String[] args) {
@@ -87,14 +47,12 @@ public class Proyecto {
                }
                int inicio3 = a.indexOf("&buscaHijoDer(");
                int fin3 = a.lastIndexOf(")");
-               int sinComa3;
                String comparar3;
                comparar3 = a.substring(inicio3+14,fin3);
                String[] almacenar4 = new String[100];
                almacenar4[1] = comparar3;
                int valor3 = Integer.parseInt(comparar3);
                System.out.println();
-               System.out.print(">");
                arbol.buscaHijoDer(valor3);
                System.out.println();
          }
@@ -140,14 +98,12 @@ public class Proyecto {
                }
                int inicio3 = a.indexOf("&buscaHijoIzq(");
                int fin3 = a.lastIndexOf(")");
-               int sinComa3;
                String comparar3;
                comparar3 = a.substring(inicio3+14,fin3);
                String[] almacenar4 = new String[100];
                almacenar4[1] = comparar3;
                int valor3 = Integer.parseInt(comparar3);
                System.out.println();
-               System.out.print(">");
                arbol.buscaHijoIzq(valor3);
                System.out.println();
          }
@@ -175,12 +131,10 @@ public class Proyecto {
                 String[] quitarComa1 = almacenar2[1].split(",");
                 for(int i=0;i<quitarComa1.length;i++){
                 sinComa1 = Integer.parseInt(quitarComa1[i]);
-                String[] prueba = new String[100];
                 valor = sinComa1;  
                 arbol.elimina(valor);
                 }
                 System.out.println();
-                System.out.print(">");
                 arbol.imprimeIno();
                 System.out.println();
             }  
@@ -199,7 +153,6 @@ public class Proyecto {
                 arbol.insertar(sinComa);
                 } 
                 System.out.println();
-                System.out.print(">");
                 arbol.imprimeIno();
                 System.out.println();
             } 
@@ -231,7 +184,6 @@ public class Proyecto {
                 arbol.elimina(valor);
                 }
                 System.out.println();
-                System.out.print(">");
                 arbol.imprimePre();
                 System.out.println();
             }    
@@ -250,7 +202,6 @@ public class Proyecto {
                 arbol.insertar(sinComa);
                 } 
                 System.out.println();
-                System.out.print(">");
                 arbol.imprimePre();
                 System.out.println();
             }    
@@ -281,7 +232,6 @@ public class Proyecto {
                 arbol.elimina(valor);
                 }
                 System.out.println();
-                System.out.print(">");
                 arbol.imprimePos();
                 System.out.println();
             }    
@@ -300,7 +250,6 @@ public class Proyecto {
                 arbol.insertar(sinComa);
                 } 
                 System.out.println();
-                System.out.print(">");
                 arbol.imprimePos();
                 System.out.println();
             } 
@@ -328,7 +277,6 @@ public class Proyecto {
                 almacenar2[1] = comparar1;
                 valor = Integer.parseInt(comparar1);
                 System.out.println();
-                System.out.print(">");
                 arbol.buscaHijoDer(valor);
                 System.out.println();
             } 
@@ -355,7 +303,6 @@ public class Proyecto {
                 almacenar2[1] = comparar1;
                 valor = Integer.parseInt(comparar1);
                 System.out.println();
-                System.out.print(">");
                 arbol.buscaHijoIzq(valor);
                 System.out.println();
             }                   

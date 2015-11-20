@@ -51,6 +51,8 @@ public class Arbol {
     
     public void imprimeIno(){
     
+        System.out.print("-->");
+        
         inorder(raiz);
     }
     
@@ -67,6 +69,8 @@ public class Arbol {
     
     public void imprimePre(){
     
+        System.out.print("-->");
+        
         preorder(raiz);
     } 
     
@@ -83,6 +87,8 @@ public class Arbol {
 
     public void imprimePos(){
     
+        System.out.print("-->");
+        
         postorden(raiz);
     } 
     
@@ -127,11 +133,15 @@ public class Arbol {
     
     public int buscaHijoIzq(int valor){
     
+        System.out.print("--> "+buscar(valor).izq.valor);
+        
         return buscar(valor).izq.valor;
     }
     //Buscar un nodo Z para obtener hijo derecho
     public int buscaHijoDer(int valor){
     
+        System.out.print("--> "+buscar(valor).der.valor);
+        
         return buscar(valor).der.valor;
     }
     
